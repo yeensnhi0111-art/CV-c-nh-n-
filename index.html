@@ -37,7 +37,7 @@
       border: 1px solid #f5dbe3;
     }
 
-    /* HỌA TIẾT TRANG TRÍ: GẤU CON, BÔNG HOA, TRÁI TIM, NGÔI SAO, CHẤM BI */
+    /* HỌA TIẾT TRANG TRÍ: GẤU CON, HOA, TIM, SAO, CHẤM BI, CHÂN MÈO CẦU VỒNG, MÂY, NƠ, SPARKLES */
     .decor-item {
       position: absolute;
       pointer-events: none;
@@ -145,6 +145,95 @@
       height: 28px;
       vertical-align: middle;
       margin-left: 4px;
+    }
+
+    /* Chân mèo cầu vồng */
+    .cat-paw-rainbow-1 {
+      width: 42px;
+      height: 42px;
+      top: 52%;
+      left: 18px;
+      opacity: 0.9;
+      transform: rotate(-18deg);
+    }
+
+    .cat-paw-rainbow-2 {
+      width: 38px;
+      height: 38px;
+      top: 18%;
+      right: 22px;
+      opacity: 0.88;
+      transform: rotate(16deg);
+    }
+
+    .cat-paw-rainbow-3 {
+      width: 34px;
+      height: 34px;
+      bottom: 62px;
+      right: 26px;
+      opacity: 0.85;
+      transform: rotate(-8deg);
+    }
+
+    /* Đám mây pastel */
+    .cloud-top-mid {
+      width: 58px;
+      height: 34px;
+      top: 10px;
+      left: 49%;
+      opacity: 0.85;
+    }
+
+    .cloud-bottom-left {
+      width: 52px;
+      height: 30px;
+      bottom: 14px;
+      left: 62px;
+      opacity: 0.82;
+    }
+
+    /* Nơ ruy băng pastel */
+    .ribbon-top-left {
+      width: 34px;
+      height: 28px;
+      top: 12px;
+      left: 48px;
+      opacity: 0.9;
+      transform: rotate(10deg);
+    }
+
+    .ribbon-mid-right {
+      width: 32px;
+      height: 26px;
+      top: 64%;
+      right: 16px;
+      opacity: 0.88;
+      transform: rotate(-14deg);
+    }
+
+    /* Lấp lánh 4 cánh (sparkles) */
+    .sparkle-1 {
+      width: 20px;
+      height: 20px;
+      top: 28%;
+      left: 28px;
+      opacity: 0.85;
+    }
+
+    .sparkle-2 {
+      width: 22px;
+      height: 22px;
+      top: 50%;
+      right: 24px;
+      opacity: 0.85;
+    }
+
+    .sparkle-3 {
+      width: 18px;
+      height: 18px;
+      bottom: 24px;
+      left: 52%;
+      opacity: 0.85;
     }
 
     /* CỘT BÊN TRÁI - HỒNG PASTEL CHỦ ĐẠO + XANH DƯƠNG & VÀNG PASTEL */
@@ -305,6 +394,26 @@
       border-radius: 8px;
     }
 
+    /* NÚT BẬT/TẮT NHẠC NỔI */
+    .floating-music-btn {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      z-index: 999;
+      background: linear-gradient(135deg, #f9d8e1, #fff3c4);
+      color: #a84863;
+      border: 2px solid #ffffff;
+      border-radius: 30px;
+      padding: 8px 15px;
+      font-size: 12.5px;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(168, 92, 118, 0.25);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     /* CỘT BÊN PHẢI */
     .right-column {
       width: 66%;
@@ -439,6 +548,13 @@
       <path d="M50 86 C50 86 14 60 14 34 C14 20 25 12 37 12 C44 12 48 16 50 21 C52 16 56 12 63 12 C75 12 86 20 86 34 C86 60 50 86 50 86 Z" fill="#f7a8be" stroke="#d97a96" stroke-width="3"/>
     </svg>
 
+    <!-- Nơ hồng pastel phía trên bên trái -->
+    <svg class="decor-item ribbon-top-left" viewBox="0 0 120 90" aria-hidden="true">
+      <polygon points="56,45 14,16 22,45 14,74" fill="#f9b5c8" stroke="#c96b88" stroke-width="3" stroke-linejoin="round"/>
+      <polygon points="64,45 106,16 98,45 106,74" fill="#f9b5c8" stroke="#c96b88" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="51" y="36" width="18" height="18" rx="6" fill="#fff0b3" stroke="#c96b88" stroke-width="3"/>
+    </svg>
+
     <!-- Trái tim xanh pastel gần đầu trang cột phải -->
     <svg class="decor-item heart-right-header" viewBox="0 0 100 100" aria-hidden="true">
       <path d="M50 86 C50 86 14 60 14 34 C14 20 25 12 37 12 C44 12 48 16 50 21 C52 16 56 12 63 12 C75 12 86 20 86 34 C86 60 50 86 50 86 Z" fill="#c7e6fa" stroke="#7fb7dc" stroke-width="3"/>
@@ -449,9 +565,99 @@
       <polygon points="50,10 61,36 89,39 68,58 74,86 50,71 26,86 32,58 11,39 39,36" fill="#fff0b3" stroke="#e3be56" stroke-width="3" stroke-linejoin="round"/>
     </svg>
 
+    <!-- Đám mây xanh pastel cười nhẹ phía trên -->
+    <svg class="decor-item cloud-top-mid" viewBox="0 0 140 80" aria-hidden="true">
+      <path d="M34 62 H104 C118 62 128 52 128 39 C128 27 119 18 107 17 C102 8 92 4 81 4 C69 4 59 10 54 19 C50 17 45 16 40 16 C25 16 14 27 14 41 C14 53 23 62 34 62 Z" fill="#e1f3fd" stroke="#85bce0" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="56" cy="40" r="3" fill="#4f6d82"/>
+      <circle cx="82" cy="40" r="3" fill="#4f6d82"/>
+      <path d="M65 45 Q69 49 73 45" fill="none" stroke="#4f6d82" stroke-width="2.2" stroke-linecap="round"/>
+      <ellipse cx="49" cy="44" rx="4.5" ry="2.5" fill="#f7a8be" opacity="0.8"/>
+      <ellipse cx="89" cy="44" rx="4.5" ry="2.5" fill="#f7a8be" opacity="0.8"/>
+    </svg>
+
     <!-- Ngôi sao xanh dương pastel phía dưới -->
     <svg class="decor-item star-bottom-mid" viewBox="0 0 100 100" aria-hidden="true">
       <polygon points="50,10 61,36 89,39 68,58 74,86 50,71 26,86 32,58 11,39 39,36" fill="#d9effd" stroke="#85bce0" stroke-width="3" stroke-linejoin="round"/>
+    </svg>
+
+    <!-- Đám mây vàng pastel góc dưới bên trái -->
+    <svg class="decor-item cloud-bottom-left" viewBox="0 0 140 80" aria-hidden="true">
+      <path d="M34 62 H104 C118 62 128 52 128 39 C128 27 119 18 107 17 C102 8 92 4 81 4 C69 4 59 10 54 19 C50 17 45 16 40 16 C25 16 14 27 14 41 C14 53 23 62 34 62 Z" fill="#fff7d6" stroke="#dfc062" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="57" cy="41" r="2.8" fill="#785c24"/>
+      <circle cx="81" cy="41" r="2.8" fill="#785c24"/>
+      <path d="M66 46 Q69 49 72 46" fill="none" stroke="#785c24" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Chân mèo cầu vồng 1 (cột trái) -->
+    <svg class="decor-item cat-paw-rainbow-1" viewBox="0 0 120 120" aria-hidden="true">
+      <defs>
+        <linearGradient id="rainbowPaw1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffb3c6"/>
+          <stop offset="33%" stop-color="#ffe599"/>
+          <stop offset="66%" stop-color="#bce3fa"/>
+          <stop offset="100%" stop-color="#e5c8ff"/>
+        </linearGradient>
+      </defs>
+      <circle cx="28" cy="44" r="12" fill="#ffb3c6" stroke="#9e6d82" stroke-width="2.6"/>
+      <circle cx="48" cy="28" r="12" fill="#ffe599" stroke="#9e8246" stroke-width="2.6"/>
+      <circle cx="72" cy="28" r="12" fill="#bce3fa" stroke="#5b8aa8" stroke-width="2.6"/>
+      <circle cx="92" cy="44" r="12" fill="#e5c8ff" stroke="#8568a3" stroke-width="2.6"/>
+      <ellipse cx="60" cy="72" rx="28" ry="22" fill="url(#rainbowPaw1)" stroke="#8c687a" stroke-width="2.8"/>
+      <circle cx="50" cy="70" r="4" fill="#fff9fb"/>
+      <circle cx="70" cy="70" r="4" fill="#fff9fb"/>
+      <ellipse cx="60" cy="78" rx="7" ry="5" fill="#fff9fb"/>
+    </svg>
+
+    <!-- Chân mèo cầu vồng 2 (cột phải phía trên) -->
+    <svg class="decor-item cat-paw-rainbow-2" viewBox="0 0 120 120" aria-hidden="true">
+      <defs>
+        <linearGradient id="rainbowPaw2" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#bce3fa"/>
+          <stop offset="50%" stop-color="#ffe599"/>
+          <stop offset="100%" stop-color="#ffb3c6"/>
+        </linearGradient>
+      </defs>
+      <circle cx="28" cy="44" r="12" fill="#ffb3c6" stroke="#9e6d82" stroke-width="2.6"/>
+      <circle cx="48" cy="28" r="12" fill="#ffe599" stroke="#9e8246" stroke-width="2.6"/>
+      <circle cx="72" cy="28" r="12" fill="#bce3fa" stroke="#5b8aa8" stroke-width="2.6"/>
+      <circle cx="92" cy="44" r="12" fill="#e5c8ff" stroke="#8568a3" stroke-width="2.6"/>
+      <ellipse cx="60" cy="72" rx="28" ry="22" fill="url(#rainbowPaw2)" stroke="#8c687a" stroke-width="2.8"/>
+    </svg>
+
+    <!-- Chân mèo cầu vồng 3 (góc dưới phải) -->
+    <svg class="decor-item cat-paw-rainbow-3" viewBox="0 0 120 120" aria-hidden="true">
+      <defs>
+        <linearGradient id="rainbowPaw3" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffe599"/>
+          <stop offset="50%" stop-color="#ffb3c6"/>
+          <stop offset="100%" stop-color="#bce3fa"/>
+        </linearGradient>
+      </defs>
+      <circle cx="28" cy="44" r="12" fill="#ffb3c6" stroke="#9e6d82" stroke-width="2.6"/>
+      <circle cx="48" cy="28" r="12" fill="#ffe599" stroke="#9e8246" stroke-width="2.6"/>
+      <circle cx="72" cy="28" r="12" fill="#bce3fa" stroke="#5b8aa8" stroke-width="2.6"/>
+      <circle cx="92" cy="44" r="12" fill="#e5c8ff" stroke="#8568a3" stroke-width="2.6"/>
+      <ellipse cx="60" cy="72" rx="28" ry="22" fill="url(#rainbowPaw3)" stroke="#8c687a" stroke-width="2.8"/>
+    </svg>
+
+    <!-- Nơ xanh pastel bên cạnh phải -->
+    <svg class="decor-item ribbon-mid-right" viewBox="0 0 120 90" aria-hidden="true">
+      <polygon points="56,45 14,16 22,45 14,74" fill="#bfe3f9" stroke="#6aa6cc" stroke-width="3" stroke-linejoin="round"/>
+      <polygon points="64,45 106,16 98,45 106,74" fill="#bfe3f9" stroke="#6aa6cc" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="51" y="36" width="18" height="18" rx="6" fill="#f9d8e1" stroke="#6aa6cc" stroke-width="3"/>
+    </svg>
+
+    <!-- Lấp lánh 1, 2, 3 -->
+    <svg class="decor-item sparkle-1" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M50 6 Q54 46 94 50 Q54 54 50 94 Q46 54 6 50 Q46 46 50 6 Z" fill="#fff0b3" stroke="#dfa93b" stroke-width="3"/>
+    </svg>
+
+    <svg class="decor-item sparkle-2" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M50 6 Q54 46 94 50 Q54 54 50 94 Q46 54 6 50 Q46 46 50 6 Z" fill="#f7b2c4" stroke="#c96b88" stroke-width="3"/>
+    </svg>
+
+    <svg class="decor-item sparkle-3" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M50 6 Q54 46 94 50 Q54 54 50 94 Q46 54 6 50 Q46 46 50 6 Z" fill="#bfe3f9" stroke="#6aa6cc" stroke-width="3"/>
     </svg>
 
     <!-- Cụm chấm bi trên -->
@@ -603,11 +809,26 @@
 
         <div class="music-player-box">
           <div class="music-label">🎵 Nhạc nền yêu thích</div>
-          <audio controls loop preload="metadata">
-            <source src="phimtat.vn-audio-8076.m4a" type="audio/mp4">
+          <audio id="bgMusic" src="phimtat.vn-audio-8076.m4a" controls autoplay loop playsinline preload="auto">
             Trình duyệt của bạn không hỗ trợ phát nhạc.
           </audio>
         </div>
+
+        <script>
+          (function () {
+            const audio = document.getElementById("bgMusic");
+            if (!audio) return;
+            audio.play().catch(function () {
+              const unlock = function () {
+                audio.play().catch(function () {});
+                document.removeEventListener("touchstart", unlock);
+                document.removeEventListener("click", unlock);
+              };
+              document.addEventListener("touchstart", unlock, { once: true });
+              document.addEventListener("click", unlock, { once: true });
+            });
+          })();
+        </script>
       </div>
     </aside>
 
@@ -667,6 +888,40 @@
       </section>
     </main>
   </div>
+
+  <button id="musicToggleBtn" class="floating-music-btn" type="button">🎵 Bật nhạc</button>
+
+  <script>
+    (function () {
+      const audio = document.getElementById("bgMusic");
+      const btn = document.getElementById("musicToggleBtn");
+      if (!audio || !btn) return;
+
+      function updateBtn() {
+        btn.textContent = audio.paused ? "🎵 Bật nhạc" : "⏸️ Đang phát";
+      }
+
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (audio.paused) {
+          audio.play().then(updateBtn).catch(function () {});
+        } else {
+          audio.pause();
+          updateBtn();
+        }
+      });
+
+      const firstTap = function () {
+        if (audio.paused) {
+          audio.play().then(updateBtn).catch(function () {});
+        }
+        document.removeEventListener("click", firstTap);
+      };
+      document.addEventListener("click", firstTap);
+      audio.addEventListener("play", updateBtn);
+      audio.addEventListener("pause", updateBtn);
+    })();
+  </script>
 
 </body>
 </html>
