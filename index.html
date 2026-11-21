@@ -279,6 +279,32 @@
       border-color: #f3c1d2;
     }
 
+    /* KHUNG PHÁT NHẠC PASTEL */
+    .music-player-box {
+      margin-top: 12px;
+      background-color: #fff9e6;
+      border: 1.5px solid #f4df92;
+      border-radius: 12px;
+      padding: 10px 12px;
+      box-shadow: 0 3px 8px rgba(168, 92, 118, 0.08);
+    }
+
+    .music-label {
+      font-size: 11.8px;
+      font-weight: 700;
+      color: #8a6514;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .music-player-box audio {
+      width: 100%;
+      height: 34px;
+      border-radius: 8px;
+    }
+
     /* CỘT BÊN PHẢI */
     .right-column {
       width: 66%;
@@ -573,6 +599,14 @@
           <span class="tag blue-tag">📷 Chụp ảnh</span>
           <span class="tag yellow-tag">🎧 Nghe nhạc</span>
           <span class="tag pink-tag">✍️ Viết chữ sáng tạo</span>
+        </div>
+
+        <div class="music-player-box">
+          <div class="music-label">🎵 Nhạc nền yêu thích</div>
+          <audio controls loop preload="metadata">
+            <source src="phimtat.vn-audio-8076.m4a" type="audio/mp4">
+            Trình duyệt của bạn không hỗ trợ phát nhạc.
+          </audio>
         </div>
       </div>
     </aside>
