@@ -15,6 +15,11 @@
       font-family: 'Quicksand', sans-serif;
     }
 
+    html {
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       background: linear-gradient(135deg, #fdeef2 0%, #e8f4fc 55%, #fff9e6 100%);
       color: #4a4a4a;
@@ -23,6 +28,7 @@
       padding: 35px 15px;
       line-height: 1.55;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     .cv-container {
@@ -71,6 +77,24 @@
       transform: rotate(22deg);
     }
 
+    .flower-lower-right {
+      width: 42px;
+      height: 42px;
+      bottom: 84px;
+      right: 120px;
+      opacity: 0.86;
+      transform: rotate(16deg);
+    }
+
+    .flower-lower-mid {
+      width: 34px;
+      height: 34px;
+      bottom: 66px;
+      left: 44%;
+      opacity: 0.84;
+      transform: rotate(-12deg);
+    }
+
     .heart-top-left {
       width: 22px;
       height: 22px;
@@ -87,6 +111,15 @@
       right: 72px;
       opacity: 0.85;
       transform: rotate(14deg);
+    }
+
+    .heart-lower-right {
+      width: 22px;
+      height: 22px;
+      bottom: 36px;
+      right: 175px;
+      opacity: 0.85;
+      transform: rotate(-10deg);
     }
 
     .star-top-center {
@@ -192,6 +225,14 @@
       opacity: 0.82;
     }
 
+    .cloud-lower-right {
+      width: 56px;
+      height: 32px;
+      bottom: 24px;
+      left: 62%;
+      opacity: 0.84;
+    }
+
     /* Nơ ruy băng pastel */
     .ribbon-top-left {
       width: 34px;
@@ -233,6 +274,14 @@
       height: 18px;
       bottom: 24px;
       left: 52%;
+      opacity: 0.85;
+    }
+
+    .sparkle-4 {
+      width: 20px;
+      height: 20px;
+      bottom: 78px;
+      left: 56%;
       opacity: 0.85;
     }
 
@@ -522,20 +571,73 @@
       color: #555555;
     }
 
+    .goal-card {
+      background: linear-gradient(135deg, #fff9e6 0%, #fdf0f4 55%, #edf7fe 100%);
+      border: 1.5px dashed #f2bfd0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: #4f4448;
+      font-size: 12.8px;
+      font-weight: 500;
+    }
+
+    .goal-card p + p {
+      margin-top: 8px;
+    }
+
     /* Tương thích màn hình điện thoại */
     @media (max-width: 720px) {
+      body {
+        padding: 12px 8px;
+      }
       .cv-container {
         flex-direction: column;
+        border-radius: 12px;
       }
       .left-column, .right-column {
         width: 100%;
+        max-width: 100%;
         border-right: none;
+        overflow-x: hidden;
       }
       .left-column {
+        padding: 24px 16px;
         border-bottom: 2px solid #dceefb;
+      }
+      .right-column {
+        padding: 24px 16px 68px 16px;
+      }
+      .header-name {
+        font-size: 20px;
+        line-height: 1.25;
+      }
+      .header-subtitle {
+        font-size: 10.5px;
+        letter-spacing: 0.4px;
+      }
+      .item-heading {
+        font-size: 13.5px;
       }
       .avatar-wrapper {
         margin: 0 auto 20px auto;
+      }
+      .cat-paw-rainbow-1,
+      .cat-paw-rainbow-2,
+      .cat-paw-rainbow-3,
+      .flower-mid-right,
+      .flower-lower-right,
+      .flower-lower-mid,
+      .ribbon-mid-right,
+      .heart-right-header,
+      .heart-lower-right,
+      .cloud-lower-right,
+      .dots-cluster-top,
+      .dots-cluster-right,
+      .sparkle-1,
+      .sparkle-2,
+      .sparkle-3,
+      .sparkle-4 {
+        display: none;
       }
     }
   </style>
@@ -558,6 +660,11 @@
     <!-- Trái tim xanh pastel gần đầu trang cột phải -->
     <svg class="decor-item heart-right-header" viewBox="0 0 100 100" aria-hidden="true">
       <path d="M50 86 C50 86 14 60 14 34 C14 20 25 12 37 12 C44 12 48 16 50 21 C52 16 56 12 63 12 C75 12 86 20 86 34 C86 60 50 86 50 86 Z" fill="#c7e6fa" stroke="#7fb7dc" stroke-width="3"/>
+    </svg>
+
+    <!-- Trái tim vàng pastel vùng dưới bên phải -->
+    <svg class="decor-item heart-lower-right" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M50 86 C50 86 14 60 14 34 C14 20 25 12 37 12 C44 12 48 16 50 21 C52 16 56 12 63 12 C75 12 86 20 86 34 C86 60 50 86 50 86 Z" fill="#fff0b3" stroke="#dfb952" stroke-width="3"/>
     </svg>
 
     <!-- Ngôi sao vàng pastel phía trên -->
@@ -586,6 +693,11 @@
       <circle cx="57" cy="41" r="2.8" fill="#785c24"/>
       <circle cx="81" cy="41" r="2.8" fill="#785c24"/>
       <path d="M66 46 Q69 49 72 46" fill="none" stroke="#785c24" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Đám mây hồng pastel vùng dưới cột phải -->
+    <svg class="decor-item cloud-lower-right" viewBox="0 0 140 80" aria-hidden="true">
+      <path d="M34 62 H104 C118 62 128 52 128 39 C128 27 119 18 107 17 C102 8 92 4 81 4 C69 4 59 10 54 19 C50 17 45 16 40 16 C25 16 14 27 14 41 C14 53 23 62 34 62 Z" fill="#fde8ef" stroke="#df99b0" stroke-width="3" stroke-linejoin="round"/>
     </svg>
 
     <!-- Chân mèo cầu vồng 1 (cột trái) -->
@@ -647,7 +759,7 @@
       <rect x="51" y="36" width="18" height="18" rx="6" fill="#f9d8e1" stroke="#6aa6cc" stroke-width="3"/>
     </svg>
 
-    <!-- Lấp lánh 1, 2, 3 -->
+    <!-- Lấp lánh 1, 2, 3, 4 -->
     <svg class="decor-item sparkle-1" viewBox="0 0 100 100" aria-hidden="true">
       <path d="M50 6 Q54 46 94 50 Q54 54 50 94 Q46 54 6 50 Q46 46 50 6 Z" fill="#fff0b3" stroke="#dfa93b" stroke-width="3"/>
     </svg>
@@ -658,6 +770,10 @@
 
     <svg class="decor-item sparkle-3" viewBox="0 0 100 100" aria-hidden="true">
       <path d="M50 6 Q54 46 94 50 Q54 54 50 94 Q46 54 6 50 Q46 46 50 6 Z" fill="#bfe3f9" stroke="#6aa6cc" stroke-width="3"/>
+    </svg>
+
+    <svg class="decor-item sparkle-4" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M50 6 Q54 46 94 50 Q54 54 50 94 Q46 54 6 50 Q46 46 50 6 Z" fill="#fff0b3" stroke="#dfa93b" stroke-width="3"/>
     </svg>
 
     <!-- Cụm chấm bi trên -->
@@ -716,6 +832,26 @@
       <circle cx="33" cy="73" r="18" fill="#fce4ec" stroke="#f2b6c9" stroke-width="2.5"/>
       <circle cx="23" cy="41" r="18" fill="#fce4ec" stroke="#f2b6c9" stroke-width="2.5"/>
       <circle cx="50" cy="50" r="13" fill="#ffe89e"/>
+    </svg>
+
+    <!-- Bông hoa vàng pastel vùng dưới cột phải -->
+    <svg class="decor-item flower-lower-right" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="22" r="18" fill="#fff3c4" stroke="#f0d57d" stroke-width="2"/>
+      <circle cx="77" cy="41" r="18" fill="#fff3c4" stroke="#f0d57d" stroke-width="2"/>
+      <circle cx="67" cy="73" r="18" fill="#fff3c4" stroke="#f0d57d" stroke-width="2"/>
+      <circle cx="33" cy="73" r="18" fill="#fff3c4" stroke="#f0d57d" stroke-width="2"/>
+      <circle cx="23" cy="41" r="18" fill="#fff3c4" stroke="#f0d57d" stroke-width="2"/>
+      <circle cx="50" cy="50" r="13" fill="#f7b2c4"/>
+    </svg>
+
+    <!-- Bông hoa xanh dương pastel vùng dưới giữa -->
+    <svg class="decor-item flower-lower-mid" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="22" r="18" fill="#e1f2fc" stroke="#b9def5" stroke-width="2"/>
+      <circle cx="77" cy="41" r="18" fill="#e1f2fc" stroke="#b9def5" stroke-width="2"/>
+      <circle cx="67" cy="73" r="18" fill="#e1f2fc" stroke="#b9def5" stroke-width="2"/>
+      <circle cx="33" cy="73" r="18" fill="#e1f2fc" stroke="#b9def5" stroke-width="2"/>
+      <circle cx="23" cy="41" r="18" fill="#e1f2fc" stroke="#b9def5" stroke-width="2"/>
+      <circle cx="50" cy="50" r="13" fill="#fff3c4"/>
     </svg>
 
     <!-- Bé gấu con nâu kem đội nơ xanh pastel ở góc dưới bên phải -->
@@ -884,6 +1020,14 @@
           <span class="badge yellow-badge">Tổ chức &amp; Trình bày</span>
           <h3 class="item-heading">Soạn thảo nội dung, thuyết trình &amp; Tin học văn phòng</h3>
           <p class="item-desc">Chủ động tổng hợp tài liệu, xây dựng dàn ý trình bày rõ ràng, mạch lạc; sử dụng Word, PowerPoint và Excel phục vụ học tập và làm việc nhóm.</p>
+        </div>
+      </section>
+
+      <section class="right-section">
+        <h2 class="right-title"><span class="right-title-icon">✨</span> Định hướng cá nhân</h2>
+        <div class="goal-card">
+          <p><strong>Ngắn hạn:</strong> Nắm vững kiến thức nền tảng về lập trình C++, tư duy giải thuật và hoàn thiện kỹ năng thiết kế giao diện web sạch sẽ, có tính thẩm mỹ tại HCMUE.</p>
+          <p><strong>Dài hạn:</strong> Phát triển bản thân theo hướng công nghệ sáng tạo, kết hợp sự chỉn chu, thẩm mỹ cá nhân với kỹ năng lập trình để xây dựng các sản phẩm web hữu ích và thân thiện với người dùng.</p>
         </div>
       </section>
     </main>
